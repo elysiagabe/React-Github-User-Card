@@ -70,6 +70,7 @@ class App extends React.Component {
         .then(response => {
           //console.log(response.data)
           let userFollowers = response.data;
+          this.setState({ followers: [] });
           userFollowers.map(follower => {
             axios.get(`https://api.github.com/users/${follower.login}`)
               .then(response => {
