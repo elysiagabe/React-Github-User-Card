@@ -1,7 +1,7 @@
 import React from 'react';
 
 const UserCard = ({userInfo}) => {
-    console.log("user card props:", userInfo)
+    //console.log("user card props:", userInfo)
 
     return (
         <div>
