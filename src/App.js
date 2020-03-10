@@ -90,8 +90,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <input value={this.state.query} onChange={this.handleInputChange}/>
-        <button onClick={this.fetchUser}>Search</button>
+        <div className="search">
+          <h1>Find a GitHub User!</h1>
+          <p>Enter their username in the field below to get started.</p>
+          <input value={this.state.query} onChange={this.handleInputChange}/>
+          <button onClick={this.fetchUser}>Search</button>
+        </div>
         <UserCard userInfo={this.state.userInfo} />
         <Followers followers={this.state.followers} />
       </div>
